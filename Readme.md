@@ -1,5 +1,4 @@
 # Photoshop Export Workflow
-## Simple Photoshop scripts for file saving automation
 
 PEW allows you to automate picture saving tasks with simple to write scripts. Export photos for web publishing, print, stocks, etc. with a click of a button. You don’t need to be a programmer to make that scripts.
 
@@ -70,7 +69,7 @@ Also you can define several profiles for signature text, author name and author�
 
 Run your scripts via File -> Scripts menu in Photoshop.
 
-![Меню Scripts](http://sapegin.me/images/projects/pew/pew_menu.jpg)
+![Меню Scripts](http://sapegin.me/images/projects/pew/pew_menu.png)
 
 
 ---
