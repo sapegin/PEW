@@ -7,9 +7,9 @@ ExportScript( function() {
 	
 	if (resolution < 4000000) {
 		var save = confirm(
-			'Разрешение файла меньше 4 мегапикселей и его не возьмут на многие микростоки.\n' +
+			'File resolution less than 4 megapixels.\n' +
 			getResolutionString() + '\n' + 
-			'Всё равно сохранять?'
+			'Save anyway?'
 		);
 	}
 	else {
@@ -17,14 +17,12 @@ ExportScript( function() {
 	}
 	
 	if (save) {
-		// спрашиваем у пользователя суффикс
-		var suffix = prompt('Суффикс:', '');
+		// Ask user for suffix
+		var suffix = prompt('Suffix:', '');
 		
-		// конвертируем профиль, устанавливаем разрешение и сохраняем
 		convertProfile();
 		setPrintResolution();
-		saveAsJpeg(getFilePath('Microstock', suffix), 12, false);
-		
+		saveAsJpeg(getFilePath('Microstock', suffix), 12, false);		
 	}
 
 } );

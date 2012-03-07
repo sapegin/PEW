@@ -4,38 +4,35 @@
  */
 
 /**
- * Папка для сохранения файлов (будет создана автоматически)
+ * Output folder (will be created automatically)
  */
 outDir = "D:/Cormorant/Photos/Out";
 
 
 /**
- * Профили	
- * Содержат информацию об авторе, которая будет записана в экспотируемые файлы.
- * Определяется автоматически или вручную.
+ * Profiles
  */
 
-// Профиль
-// -1 -- Автовыбор (поле EXIF/Author должно совпадать с одним из элементов массива profileAuthor)
-//  0, 1, 2... -- 1-й, 2-й, 3-й… элемент массива
-// Если автовыбор не срабатывает, будет использоваться 0-я строка.
+// Active profile
+//    -1 -- Auto (based on EXIF/Author field)
+//     0, 1, 2... -- 1st, 2nd, 3rd... profile
 profileNumber = -1;
 
-// Автор
+// Author
 profileAuthor = [
 	"",
-	"Artem Sapegin",
-	"Olga Flegontova"
+	"Artem Sapegin",  // EXIF/Author == "Artem Sapegin"
+	"Olga O'Hamster"
 ];
 
-// Копирайт
+// Copyright
 profileCopyright = [
 	"",
-	"Артём Сапегин | birdwatcher.ru",
-	"%YEAR% Ольга Флегонтова | airve.livejournal.com" // автоподстановка года (см. ниже)
+	"Artem Sapegin | birdwatcher.ru",
+	"%YEAR% Olga O'Hamster | airve.livejournal.com" // Year auto substitution (see below)
 ];
 
-// Адрес сайта автора
+// Author's website
 profileUrl = [
 	"",
 	"birdwatcher.ru",
@@ -44,54 +41,53 @@ profileUrl = [
 
 
 /**
- * Год по умолчанию.  Если этот параметр не указан и в файле нет данных EXIF, будет использован текущий год.
+ * Default year. If this options is empty and EXIF contains no data, current year will be used
  */
 defaultYear = 2008;
 
 
 /**
- * Внутренняя подпись
+ * Signature
  */
-inSignatureFont = "Verdana";			// шрифт
-inSignatureFontSize = 11;				// размер шрифта (пункты)
-inSignatureAA = AntiAlias.SHARP;		// сглаживание (см. документацию)
-inSignatureOpacity = 100;				// непрозрачность (проценты)
-inSignatureBold = false;				// жирность (true, false)
-inSignatureColor = "999999";			// цвет внутренней подписи (значение HEX)
+inSignatureFont = "Verdana";			// Font
+inSignatureFontSize = 11;				// Font size (pt)
+inSignatureAA = AntiAlias.SHARP;		// Anti aliasing
+inSignatureOpacity = 100;				// Opacity (%)
+inSignatureBold = false;				// Bold (true, false)
+inSignatureColor = "999999";			// Color (HEX value)
 
 
 /**
- * Подпись на рамке
+ * Frame signature
  */
-frameSignaturePaddingTop = 1;			// отступ сверху от рамки (пиксели)
-frameSignatureFont = "Verdana"; 		// шрифт
-frameSignatureFontSize = 11;			// размер шрифта (пункты)
-frameSignatureAA = AntiAlias.SHARP;		// сглаживание (см. документацию)
-frameSignatureBold = false;				// жирность (true, false)
-frameSignatureColor = "999999";			// цвет (значение HEX)
+frameSignaturePaddingTop = 1;			// Padding from top of frame (px)
+frameSignatureFont = "Verdana"; 		// Font
+frameSignatureFontSize = 11;			// Font size (pt)
+frameSignatureAA = AntiAlias.SHARP;		// Anti aliasing
+frameSignatureBold = false;				// Bold (true, false)
+frameSignatureColor = "999999";			// Color (HEX value)
 
 
 /**
- * Внутренняя рамка
+ * Small frame
  */
-innerBorderThickness = 1;				// толщина внутренней рамки (пиксели)
-innerBorderColor = "000000";			// цвет внутренней рамки (значение HEX)
+innerBorderThickness = 1;				// Thickness (px)
+innerBorderColor = "000000";			// Color (HEX value)
 
 
 /**
- * Внешная рамка
+ * Big frame
  */
-outerBorderThickness = 18;				// толщина внешней рамки (пиксели)
-outerBorderColor = "FFFFFF";			// цвет внешней рамки (значение HEX)
-outerBorderType = "full";			// тип рамки (full - полная, fake - только снизу)
+outerBorderThickness = 18;				// Thickness (px)
+outerBorderColor = "FFFFFF";			// Color (HEX value)
+outerBorderType = "full";				// Frame type (full -- standard, fake -- bottom only)
 
 
 /**
- * Пользовательские параметры
- * Вы можете использовать любые параметры, какие вам нужны.
+ * Custom options
+ * You can define any options you need
  */
 
-// Размеры изображений
 webMaxWidth  = 796;
 webMaxHeight = 778;
 webSquareSize = 696;

@@ -6,7 +6,7 @@ try {
 	var originalName = oldAd.name;
 }
 catch ( e ) {
-	alert( 'Для правильной работы скрипта у документа должно быть задано имя (попробуйте сохранить файл).' );
+	alert('Image shoud have a filename. Try to save your image.');
 }
 
 var dotPos = originalName.lastIndexOf( '.' );
@@ -14,7 +14,7 @@ var baseName = originalName.substr( 0, dotPos );
 var ext = originalName.substr( dotPos );
 
 
-// создаём копию изображения со сведёнными слоями
+// Duplicate image with flattened layers
 oldAd.duplicate( baseName + '_resize' + ext, true );			
 
 oldAd.close( SaveOptions.PROMPTTOSAVECHANGES );
@@ -22,7 +22,7 @@ oldAd.close( SaveOptions.PROMPTTOSAVECHANGES );
 
 var ad = app.activeDocument;
 
-// уменьшаем
+// Resize
 var coeff = Math.sqrt( TARGET_RESOLUTION / ( ad.width * ad.height ) );
 var newWidth = Math.ceil( ad.width * coeff );
 

@@ -1,68 +1,68 @@
 ﻿#include "Include/common.jsx"
 
 /*
- * Маленький файл для веба
+ * Small file for web usage
  */
 ExportScript(function() {
 
-	// Уменьшаем картинку 
+	// Resize image
 	resizeImage(webMaxWidth, webMaxHeight, webSquareSize);
-	// Можно сразу указать нужные размеры
+	// You can provide desired dimensions here
 	// resizeImage(800, 800, 700);
 
-	// Возвращаем резкость фильтром Smart Sharpen (с показом окна фильтра)
+	// Apply Smart Sharpen filter
 	smartSharpen(0.2, 500, 40, 10);
 
-	// Добавляем рамку
+	// Add frame
 	addFrame();
 	
-	// Добавляем на рамку подпись
+	// Add signature to frame
 	addFrameSignature();
 	
-	// Конвертируем в sRGB
+	// Convert to sRGB profile
 	convertProfile();
 
-	// Сохраняем в JPEG: в папку Web, качество 10
+	// Save as JPEG: Web/filename.jpg, quality: 10
 	saveAsJpeg(getFilePath('Web'), 10);
 
 });
 
 
 /*
- * Файл побольше для экрана
+ * Bigger file for screen viewing
  */
 ExportScript(function() {
 
-	// Уменьшаем картинку
+	// Resize image
 	resizeImage(screenMaxWidth, screenMaxHeight);
 	
-	// Возвращаем резкость фильтром Smart Sharpen (без показа окна фильтра)
+	// Apply Smart Sharpen filter
 	smartSharpen(0.3, 500, 50, 18, false);
 
-	// Конвертируем в sRGB
+	// Convert to sRGB profile
 	convertProfile();
 
-	// Сохраняем в JPEG: в папку Screen, префикс -- big, кладём в папку с именем сессии, качество 11
+	// Save as JPEG: Screen/SessionName/filename_big.jpg, quality: 11
 	saveAsJpeg(getFilePath('Screen', 'big', true), 11);
 
 });
 
 
 /*
- * Совсем большой файл для телевизора
+ * Big file for viewing on HD TV
  */
 ExportScript(function() {
 	
-	// Уменьшаем картинку
+	// Resize image
 	resizeImage(tvMaxWidth, tvMaxHeight);
 	
-	// Возвращаем резкость фильтром Smart Sharpen (без показа окна фильтра)
+	// Apply Smart Sharpen filter
 	smartSharpen(0.3, 500, 60, 20, false);
 
-	// Конвертируем в sRGB
+	// Convert to sRGB profile
 	convertProfile();
 
-	// Сохраняем в JPEG: в папку TV, префикс -- tv, кладём в папку с именем сессии, качество 10
+	// Save as JPEG: TV/SessionName/filename_tv.jpg, quality: 10
 	saveAsJpeg(getFilePath('TV', 'tv', true), 10);
 
 });

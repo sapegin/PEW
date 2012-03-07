@@ -2,6 +2,6 @@
 
 ExportScript(function() {
 
-	// Ваш код
+	// Your code here
 
 });

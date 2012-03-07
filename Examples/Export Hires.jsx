@@ -2,13 +2,13 @@
 
 ExportScript(function() {
 	
-	// Конвертируем в sRGB
+	// Convert to sRGB profile
 	convertProfile();
 
-	// Устанавливаем разрешение 300 dpi
+	// Set resolution to 300 dpi
 	setPrintResolution();
 		
-	// Сохраняем в JPEG: в папку Hires, качество 12
+	// Save as JPEG: Hires/filename.jpg, quality: 12
 	saveAsJpeg(getFilePath('Hires'), 12);
 
 });

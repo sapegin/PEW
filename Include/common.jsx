@@ -29,7 +29,7 @@ function ExportScript( func )
 {
 	if (!app.documents.length)
 	{
-		alert('Необходимо открыть документ.');
+		alert('You should open an image.');
 	}
 	else
 	{
@@ -532,7 +532,7 @@ function _makeTempDocument()
 		sessionName = ad.path.name;
 	}
 	catch (e) {
-		alert('Для правильной работы сценария у документа должно быть задано имя (попробуйте сохранить файл).');
+		alert('Image shoud have a filename. Try to save your image.');
 		return false;
 	}
 	
@@ -645,7 +645,7 @@ function _fitImage(width, height) {
  */
 function _getResolutionString() {
 	var ad = app.activeDocument;
-	return 'Разрешение файла: ' + parseInt( ad.width, 10 ) + '×' + parseInt( ad.height, 10 ) + ' = ' +  Math.floor( ad.width * ad.height / 1000000 ) + ' мп.';
+	return 'Image resolution: ' + parseInt( ad.width, 10 ) + '×' + parseInt( ad.height, 10 ) + ' = ' +  Math.floor( ad.width * ad.height / 1000000 ) + ' megapixels.';
 }
 
 /**

@@ -2,24 +2,24 @@
 
 ExportScript(function() {
 
-	// Уменьшаем картинку 
+	// Resize image
 	resizeImage(webMaxWidth, webMaxHeight, webSquareSize);
-	// Можно сразу указать нужные размеры
+	// You can provide desired dimensions here
 	// resizeImage(800, 800, 700);
 
-	// Возвращаем резкость фильтром Smart Sharpen (с показом окна фильтра)
+	// Apply Smart Sharpen filter
 	smartSharpen(0.2, 500, 40, 10);
 
-	// Добавляем рамку
+	// Add frame
 	addFrame();
 	
-	// Добавляем на рамку подпись
+	// Add signate to frame
 	addFrameSignature();
 	
-	// Конвертируем в sRGB
+	// Convert to sRGB profile
 	convertProfile();
 
-	// Сохраняем в JPEG: в папку Web, качество 10
+	// Save as JPEG: Web/filename.jpg, quality: 10
 	saveAsJpeg(getFilePath('Web'), 10);
 
 });
