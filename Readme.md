@@ -1,6 +1,6 @@
 # Photoshop Export Workflow
 
-PEW allows you to automate picture saving tasks with simple to write scripts. Export photos for web publishing, print, stocks, etc. with a click of a button. You don’t need to be a programmer to make that scripts.
+PEW allows you to automate picture saving tasks with scripts simple to write. Export photos for web publishing, print, stocks, etc. with a click of a button. You don’t need to be a programmer to make those scripts.
 
 ![Photoshop Export Workflow](http://sapegin.me/images/projects/pew/pew.jpg)
 
@@ -60,7 +60,7 @@ Now you can write your own scripts. You can use `Examples/template.jsx` as templ
 
 ## Configuration
 
-Open `Config/config.jsx` in your text editor. (See `Config/config.sample.jsx` for details). You can add any number of variables an use them in your scripts. Most of the options have default values: you haven’t define all possible options in you config file.
+Open `Config/config.jsx` in your text editor. (See `Config/config.sample.jsx` for details). You can add any number of variables an use them in your scripts. Most of the options have default values: you haven’t to define all possible options in your config file.
 
 Also you can define several profiles for signature text, author name and author’s website. Profile can be selected automatically based on EXIF/Author field. See example in `Config/config.sample.jsx`.
 
@@ -69,7 +69,7 @@ Also you can define several profiles for signature text, author name and author�
 
 Run your scripts via File -> Scripts menu in Photoshop.
 
-![Меню Scripts](http://sapegin.me/images/projects/pew/pew_menu.png)
+![Scripts Menu](http://sapegin.me/images/projects/pew/pew_menu.png)
 
 
 ---
