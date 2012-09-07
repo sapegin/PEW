@@ -1,6 +1,6 @@
-﻿/**
+/**
  * Photoshop Export Workflow
- * (C) 2006-2008 Artem Sapegin (sapegin.ru)
+ * (C) 2006-2012 Artem Sapegin (sapegin.me)
  */
 
 $.level = 0;
@@ -529,6 +529,7 @@ function _makeTempDocument()
 
 	try {
 		originalName = ad.name;
+		originalPath = ad.path;
 		sessionName = ad.path.name;
 	}
 	catch (e) {
