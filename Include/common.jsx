@@ -429,16 +429,34 @@ function addInSignature()
 
 
 /**
- * Генерация пути и имени сохраняемого документа
+ * Filepath for saving picture in subfolder of `outDir`
  *
- * @param string Папка
- * @param string Суффикс
- * @param bool Положить в папку dir/sessionName?
+ * @param {String} dir outDir’s subfolder name
+ * @param {String} [suffix] Suffix (string after '_' in filename)
+ * @param {Sool} [inSessionDir] dir/sessionName?
  */
 function getFilePath(dir, suffix, inSessionDir) {
-	var name = originalName.substr(0, originalName.lastIndexOf('.'));
+	return outDir + '/' + dir + '/' + (inSessionDir ? sessionName + '/' : '') +
+		getOriginalNameWithoutExtension() + (suffix ? ('_' + suffix) : '');
+}
 
-	return outDir + '/' + dir + '/' + (inSessionDir ? sessionName + '/' : '') + name + (suffix ? ('_' + suffix) : '');
+
+/**
+ * Returns filepath for saving picture in custom folder
+ *
+ * @param {String} dir Directory where file should be saved
+ * @param {String} [suffix] Suffix (string after _ in filename)
+ */
+function getCustomFilePath(dir, suffix) {
+	return dir + '/' + getOriginalNameWithoutExtension() + (suffix ? ('_' + suffix) : '');
+}
+
+
+/**
+ * Returns `originalName` without extension
+ */
+function getOriginalNameWithoutExtension() {
+	return originalName.substr(0, originalName.lastIndexOf('.'));
 }
 
 
