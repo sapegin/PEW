@@ -15,7 +15,7 @@
 	dlg.pnlPos.rbBL  = dlg.pnlPos.add("radiobutton", [10,35,140,50], "Bottom left");
 	dlg.pnlPos.rbBR  = dlg.pnlPos.add("radiobutton", [150,35,280,50], "Bottom right");
 
-	dlg.pnlColor = dlg.add("panel", [10,80,300,150], "Цвет");
+	dlg.pnlColor = dlg.add("panel", [10,80,300,150], "Color");
 	dlg.pnlColor.stBrightness = dlg.pnlColor.add("statictext", [10,15,80,30], "Brightness:");
 	dlg.pnlColor.scrlBrightness = dlg.pnlColor.add("scrollbar", [105,15,230,30], 0, 0, 100);
 	dlg.pnlColor.edtBrightness = dlg.pnlColor.add("edittext", [240,13,280,32]);
@@ -90,7 +90,7 @@
 			layer.opacity = value;			
 		};
 
-	// значения по умолчанию
+	// Default values
 	dlg.pnlPos.rbBR.value = true;
 	dlg.pnlPos.rbBR.onClick();
 	
