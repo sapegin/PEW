@@ -72,6 +72,10 @@ Run your scripts via File -> Scripts menu in Photoshop.
 ![Scripts Menu](http://sapegin.me/images/projects/pew/pew_menu.png)
 
 
+## API
+
+See the [API documentation](https://github.com/sapegin/PEW/wiki/Photoshop-Export-Workflow-API) in wiki.
+
 ---
 
 ## License 
