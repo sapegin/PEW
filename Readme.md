@@ -2,7 +2,7 @@
 
 PEW allows you to automate picture saving tasks with scripts simple to write. Export photos for web publishing, print, stocks, etc. with a click of a button. You donâ€™t need to be a programmer to make those scripts.
 
-![Photoshop Export Workflow](http://sapegin.me/images/projects/pew/pew.jpg)
+![Photoshop Export Workflow](http://wow.sapegin.me/1V2r3P1J041j/pew.jpg)
 
 
 ## Features
@@ -69,7 +69,7 @@ Also you can define several profiles for signature text, author name and authorâ
 
 Run your scripts via File -> Scripts menu in Photoshop.
 
-![Scripts Menu](http://sapegin.me/images/projects/pew/pew_menu.png)
+![Scripts Menu](http://wow.sapegin.me/2X3F061b2I3L/pew_menu.png)
 
 
 ## API
